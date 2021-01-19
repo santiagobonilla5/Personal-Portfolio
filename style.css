@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(./images/pw_maze_black.png);
+  font-family: 'Fraunces', serif;
+}
+
+/* CSS HEX */
+:root {
+  --rich-black-fogra-39: #0e0e0e;
+  --olive-drab-7: #36311fff;
+  --davys-grey: #59544bff;
+  --chinese-violet: #7e6b8fff;
+  --westlogo: #a0a59f;
+  --westlogo-light: #dce0d8;
+}
+
+/* nav */
+#navbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 10%;
+}
+
+#navbar ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-right: 20px;
+}
+#navbar ul a {
+  color: var(--westlogo-light);
+  font-weight: normal;
+  margin-right: 30px;
+  font-size: 1.3em;
+}
+
+/* content */
+
+.container {
+  width: 90vw;
+}
+
+#welcome-section {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('./images/westlogo.png') no-repeat center center/cover;
+}
+
+h1 {
+  margin-top: 300px;
+  color: var(--westlogo-light);
+}
+
+/* projects */
+#projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.project-tile {
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-tile a {
+  text-decoration: none;
+}
+
+.project-tile h2 {
+  font-size: 1.5em;
+  color: var(--westlogo-light);
+}
+
+.project-tile img {
+  width: 100%;
+}
+
+/* contact */
+#contact {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact a {
+  color: var(--westlogo-light);
+  font-weight: normal;
+  font-size: 1.3em;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 95vw;
+  }
+}
+
+@media (max-width: 700px) {
+  #projects {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 430px) {
+  #welcome-section {
+    background: url('./images/west.jpg') no-repeat center center/cover;
+  }
+  h1 {
+    margin-top: 450px;
+    color: #622b25;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  #navbar ul a {
+    font-size: 1.2em;
+    margin-right: 15px;
+  }
+}
